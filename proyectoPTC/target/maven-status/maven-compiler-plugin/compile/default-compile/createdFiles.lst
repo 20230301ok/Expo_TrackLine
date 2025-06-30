@@ -1,0 +1,7 @@
+apiTrackline\proyectoPTC\ProyectoPtcApplication.class
+apiTrackline\proyectoPTC\ServletInitializer.class
+apiTrackline\proyectoPTC\Services\UserService.class
+apiTrackline\proyectoPTC\Repositories\UserRepository.class
+apiTrackline\proyectoPTC\Models\DTO\DTOUser.class
+apiTrackline\proyectoPTC\Controllers\UserController\User.class
+apiTrackline\proyectoPTC\Entities\UserEntity.class

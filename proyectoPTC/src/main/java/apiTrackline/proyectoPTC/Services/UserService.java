@@ -1,6 +1,8 @@
 package apiTrackline.proyectoPTC.Services;
 
-import apiTrackline.proyectoPTC.Models.DTO.UserDTO;
+import apiTrackline.proyectoPTC.Controllers.UserController.User;
+import apiTrackline.proyectoPTC.Entities.UserEntity;
+import apiTrackline.proyectoPTC.Models.DTO.DTOUser;
 import apiTrackline.proyectoPTC.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,10 +16,23 @@ public class UserService {
     @Autowired
     private UserRepository repo;
 
-    public List<UserDTO> getAllUsers(){
-        List<UserEntity> usuarios = repo.findAll();
-        return usuarios.stream()
-                .map(this::convertirUsuarioDTO)
+
+    // Método público que usa el repositorio y convierte entidades a DTOs
+    public List<DTOUser> getData() {
+        List<UserEntity> users = repo.findAll();
+        return users.stream()
+                .map(this::convertirAUsuarioDTO)
                 .collect(Collectors.toList());
     }
+
+    private DTOUser convertirAUsuarioDTO(UserEntity user){
+        DTOUser dto = new DTOUser();
+        dto.setIdUsuario(user.getIdUsuario());
+        dto.setUsuario(user.getUsuario());
+        dto.setContrasenia(user.getContrasenia());
+        dto.setIdRol(user.getIdRol());
+        return dto;
+    }
 }
+
+
