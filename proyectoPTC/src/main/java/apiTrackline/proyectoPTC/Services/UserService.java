@@ -16,8 +16,8 @@ public class UserService {
     @Autowired
     private UserRepository repo;
 
-
     // Método público que usa el repositorio y convierte entidades a DTOs
+    //Método HTTP GET (obtener datos)
     public List<DTOUser> getData() {
         List<UserEntity> users = repo.findAll();
         return users.stream()
@@ -25,6 +25,7 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
+    //Convierte los datos del usuario a DTO
     private DTOUser convertirAUsuarioDTO(UserEntity user){
         DTOUser dto = new DTOUser();
         dto.setIdUsuario(user.getIdUsuario());
@@ -34,6 +35,7 @@ public class UserService {
         return dto;
     }
 
+    //Método HTTP PUT(actualizar) por id
     public String update(long id, DTOUser userDto){
         Optional<UserEntity> optionalUser = repo.findById(id);
         if (optionalUser.isPresent()) {
@@ -48,6 +50,7 @@ public class UserService {
         }
     }
 
+    //Método HTTP DELETE(eliminar) por id
     public String delete(long id) {
         Optional<UserEntity> optional = repo.findById(id);
         if (optional.isPresent()) {
@@ -58,6 +61,7 @@ public class UserService {
         }
     }
 
+    //Método HTTP POST(Insertar)
     public String post(DTOUser dtoUser) {
         try {
             UserEntity user = new UserEntity();
@@ -72,6 +76,7 @@ public class UserService {
         }
     }
 
+    //Método HTTP PATCH(actualizar un solo campo) por id
     public String patchUser(Long id, DTOUser dto) {
         Optional<UserEntity> optional = repo.findById(id);
         if (optional.isPresent()) {

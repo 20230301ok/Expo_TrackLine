@@ -1,0 +1,38 @@
+package apiTrackline.proyectoPTC.Models.DTO;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Date;
+
+@ToString
+@EqualsAndHashCode
+@Getter
+@Setter
+public class DTOOrdenEncabezado {
+    @NotBlank(message = "Id orden encabezado no puede estar en blanco.")
+    private long IdOrdenEncabezado;
+
+    @NotBlank(message = "Fecha no puede estar en blanco.")
+    private Date fecha;
+
+    @NotBlank(message = "Encargado no puede estar en blanco.")
+    private String encargado;
+
+    @NotBlank(message = "La referencia no puede estar en blanco.")
+    private String referencia;
+
+    @NotBlank(message = "El importador no puede estar en blanco.")
+    private String importador;
+
+    @NotBlank(message = "El NIT no puede estar en blanco.")
+    private String NIT;
+    private String registroIVA;
+    private String facturaA;
+    private String encargado2;
+    private String NIT2;
+    private String registroIVA2;
+}
