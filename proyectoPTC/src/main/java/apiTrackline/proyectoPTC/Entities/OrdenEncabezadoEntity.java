@@ -12,8 +12,8 @@ import java.util.Date;
 @Getter @Setter @ToString @EqualsAndHashCode
 public class OrdenEncabezadoEntity {
     @Id
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_usuario")
-    // @SequenceGenerator(name = "seq_usuairo", sequenceName = "seq_usuario", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_id_OE")
+    @SequenceGenerator(name = "seq_id_OE", sequenceName = "seq_id_OE", allocationSize = 1)
     @Column(name = "IDORDENENCABEZADO")
     private long idOrdenEncabezado;
 

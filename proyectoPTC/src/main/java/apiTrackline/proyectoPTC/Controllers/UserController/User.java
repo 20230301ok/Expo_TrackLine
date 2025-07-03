@@ -40,6 +40,7 @@ public class User {
     }
 
     @PatchMapping("/updateUserPartial/{id}")
+    //La ruta sería localhost:8080/apiUser/updateUserPartial
     public String patchUser(@PathVariable Long id, @RequestBody DTOUser dto) {
         return service.patchUser(id, dto);
     }

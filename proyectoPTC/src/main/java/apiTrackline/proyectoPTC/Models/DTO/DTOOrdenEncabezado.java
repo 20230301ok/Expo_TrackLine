@@ -1,5 +1,6 @@
 package apiTrackline.proyectoPTC.Models.DTO;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -14,9 +15,10 @@ import java.util.Date;
 @Setter
 public class DTOOrdenEncabezado {
     @NotBlank(message = "Id orden encabezado no puede estar en blanco.")
-    private long IdOrdenEncabezado;
+    private Long IdOrdenEncabezado;
 
     @NotBlank(message = "Fecha no puede estar en blanco.")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date fecha;
 
     @NotBlank(message = "Encargado no puede estar en blanco.")

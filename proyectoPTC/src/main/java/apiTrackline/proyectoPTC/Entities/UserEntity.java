@@ -11,10 +11,10 @@ import lombok.ToString;
 @Getter @Setter @ToString @EqualsAndHashCode
 public class UserEntity {
     @Id
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_usuario")
-    //@SequenceGenerator(name = "seq_usuairo", sequenceName = "seq_usuario", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_id_US")
+    @SequenceGenerator(name = "seq_id_US", sequenceName = "seq_id_US", allocationSize = 0)
     @Column(name = "IDUSUARIO")
-    private long idUsuario;
+    private Long idUsuario;
 
     @Column(name = "USUARIO")
     private String usuario;
@@ -23,5 +23,5 @@ public class UserEntity {
     private String contrasenia;
 
     @Column(name = "IDROL")
-    private long idRol;
+    private Long idRol;
 }

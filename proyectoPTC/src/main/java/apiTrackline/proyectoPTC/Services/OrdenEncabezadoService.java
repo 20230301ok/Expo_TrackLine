@@ -45,7 +45,6 @@ public class OrdenEncabezadoService {
     public String post(DTOOrdenEncabezado dto) {
         try {
             OrdenEncabezadoEntity orden = new OrdenEncabezadoEntity();
-            orden.setIdOrdenEncabezado(dto.getIdOrdenEncabezado());
             orden.setFecha(dto.getFecha());
             orden.setEncargado(dto.getEncargado());
             orden.setReferencia(dto.getReferencia());

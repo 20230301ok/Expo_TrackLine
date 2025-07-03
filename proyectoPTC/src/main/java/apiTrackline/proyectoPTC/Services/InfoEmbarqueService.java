@@ -67,7 +67,7 @@ public class InfoEmbarqueService {
             repo.deleteById(id);
             return "Información eliminada correctamente";
         } else {
-            return "Información del embarugeu no econtrada";
+            return "Información del embarque no econtrada";
         }
     }
 
@@ -75,8 +75,7 @@ public class InfoEmbarqueService {
     public String updateInfoEmb(long id, DTOInfoEmbarque dtoInfoEmbarque){
         Optional<InfoEmbarqueEntity> optionalInfoEmb = repo.findById(id);
         if (optionalInfoEmb.isPresent()) {
-            InfoEmbarqueEntity infoEmbarque= optionalInfoEmb.get();
-            infoEmbarque.setIdInfoEmbarque(dtoInfoEmbarque.getIdInfoEmbarque());
+            InfoEmbarqueEntity infoEmbarque = optionalInfoEmb.get();
             infoEmbarque.setFacturas(dtoInfoEmbarque.getFacturas());
             infoEmbarque.setProveedorRef(dtoInfoEmbarque.getProveedorRef());
             infoEmbarque.setBultos(dtoInfoEmbarque.getBultos());
@@ -104,16 +103,16 @@ public class InfoEmbarqueService {
             if (dto.getProveedorRef() != null) {
                 infoEmb.setProveedorRef(dto.getProveedorRef());
             }
-            if (dto.getBultos() != 0) {
+            if (dto.getBultos() != null) {
                 infoEmb.setBultos(dto.getBultos());
             }
             if (dto.getTipo() != null) {
                 infoEmb.setTipo(dto.getTipo());
             }
-            if (dto.getKilos() != 0) {
+            if (dto.getKilos() != null) {
                 infoEmb.setKilos(dto.getKilos());
             }
-            if (dto.getVolumen() != 0){
+            if (dto.getVolumen() != null){
                 infoEmb.setVolumen(dto.getVolumen());
             }
             repo.save(infoEmb);

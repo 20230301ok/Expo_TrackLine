@@ -11,10 +11,10 @@ import lombok.ToString;
 @Getter
 @Setter
 public class DTOUser {
-    private long idUsuario;
+    private Long idUsuario;
     private String usuario;
     private String contrasenia;
-    private long idRol;
+    private Long idRol;
 }
 
 
