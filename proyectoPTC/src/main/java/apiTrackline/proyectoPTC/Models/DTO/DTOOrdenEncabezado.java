@@ -14,7 +14,6 @@ import java.util.Date;
 @Getter
 @Setter
 public class DTOOrdenEncabezado {
-    @NotBlank(message = "Id orden encabezado no puede estar en blanco.")
     private Long IdOrdenEncabezado;
 
     @NotBlank(message = "Fecha no puede estar en blanco.")

@@ -3,6 +3,8 @@ apiTrackline\proyectoPTC\Services\UserService.class
 apiTrackline\proyectoPTC\Models\DTO\DTOInfoEmbarque.class
 apiTrackline\proyectoPTC\Repositories\UserRepository.class
 apiTrackline\proyectoPTC\Models\DTO\DTOUser.class
+apiTrackline\proyectoPTC\Repositories\TipoRepositoryRepository.class
+apiTrackline\proyectoPTC\Services\TipoServicioService.class
 apiTrackline\proyectoPTC\Controllers\UserController\User.class
 apiTrackline\proyectoPTC\Entities\UserEntity.class
 apiTrackline\proyectoPTC\ProyectoPtcApplication.class
@@ -13,5 +15,8 @@ apiTrackline\proyectoPTC\Controllers\OrdenEncabezadoController\OrdenEncabezado.c
 apiTrackline\proyectoPTC\Repositories\OrdenEncabezadoRepository.class
 apiTrackline\proyectoPTC\Services\OrdenEncabezadoService.class
 apiTrackline\proyectoPTC\Entities\InfoEmbarqueEntity.class
+apiTrackline\proyectoPTC\Models\DTO\DTOTipoServicio.class
 apiTrackline\proyectoPTC\Entities\OrdenEncabezadoEntity.class
+apiTrackline\proyectoPTC\Controllers\TipoServicioController\TipoServicio.class
+apiTrackline\proyectoPTC\Entities\TipoServicioEntity.class
 apiTrackline\proyectoPTC\Models\DTO\DTOOrdenEncabezado.class

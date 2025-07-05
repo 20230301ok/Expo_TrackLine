@@ -13,7 +13,6 @@ import lombok.ToString;
 @Setter
 public class DTOInfoEmbarque {
 
-    @NotBlank(message = "El id del info embarque es obligatorio")
     private Long idInfoEmbarque;
 
     private String facturas;
